@@ -13,7 +13,7 @@ export const colors = {
   bg: {
     primary: "#1C1C1F",
     secondary: "#313131",
-    listItem: "rgba(49, 49, 49, .65)",
+    listItem: "rgba(49, 49, 49, .45)",
   },
   text: {
     primary: "#FFFFFF",

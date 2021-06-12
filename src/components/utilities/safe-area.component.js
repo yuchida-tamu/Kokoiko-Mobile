@@ -3,6 +3,6 @@ import styled from "styled-components/native";
 
 export const SafeArea = styled(SafeAreaView)`
   flex: 1;
-  background-color: #1c1c1f;
+  background-color: ${(props) => props.theme.colors.bg["primary"]};
   align-items: center;
 `;

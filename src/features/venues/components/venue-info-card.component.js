@@ -1,5 +1,6 @@
 import React from "react";
 import { TouchableOpacity } from "react-native";
+import { BlurView } from "expo-blur";
 import { Card } from "react-native-paper";
 import { FontAwesome5 } from "@expo/vector-icons";
 //components
@@ -27,39 +28,42 @@ export const VenueInfoCard = (venue = {}) => {
     placeId,
   } = venue;
   return (
-    <VenueCardContainer>
-      <Card.Cover source={{ uri: photos[0] }} />
-      <InfoContainer>
-        <Row>
-          <Title>{name}</Title>
-          <TouchableOpacity>
-            <IconHeart />
-          </TouchableOpacity>
-        </Row>
-        <Divider />
+    <VenueCardContainer elevation={15}>
+      <BlurView intensity={75} tint="dark">
+        <Card.Cover source={{ uri: photos[0] }} />
+        <InfoContainer>
+          <Row>
+            <Title>{name}</Title>
+            <TouchableOpacity>
+              <IconHeart />
+            </TouchableOpacity>
+          </Row>
+          <Divider />
 
-        <BodyText>{address}</BodyText>
-        <Spacer position="bottom" size="medium" />
-        <AvailabilityIconContainer>
-          {isOpen ? (
-            <>
-              <Spacer position="right" size="medium">
-                <FontAwesome5 name="door-open" size={16} color="#18D8CD" />
-              </Spacer>
+          <BodyText>{address}</BodyText>
+          <Spacer position="bottom" size="medium" />
+          <AvailabilityIconContainer>
+            {isOpen ? (
+              <>
+                <Spacer position="right" size="medium">
+                  <FontAwesome5 name="door-open" size={16} color="#18D8CD" />
+                </Spacer>
 
-              <BodyText>OPEN</BodyText>
-            </>
-          ) : (
-            <>
-              <Spacer position="right" size="medium">
-                <FontAwesome5 name="door-closed" size={16} color="#E3623C" />
-              </Spacer>
+                <BodyText>OPEN</BodyText>
+              </>
+            ) : (
+              <>
+                <Spacer position="right" size="medium">
+                  <FontAwesome5 name="door-closed" size={16} color="#E3623C" />
+                </Spacer>
 
-              <BodyText>CLOSED</BodyText>
-            </>
-          )}
-        </AvailabilityIconContainer>
-      </InfoContainer>
+                <BodyText>CLOSED</BodyText>
+              </>
+            )}
+          </AvailabilityIconContainer>
+          <Spacer position="bottom" size="medium" />
+        </InfoContainer>
+      </BlurView>
     </VenueCardContainer>
   );
 };

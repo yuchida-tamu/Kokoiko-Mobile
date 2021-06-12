@@ -3,9 +3,21 @@ import styled from "styled-components/native";
 import { Searchbar as SearchbarComponent, Card } from "react-native-paper";
 import { Ionicons } from "@expo/vector-icons";
 
+export const ScreenBackground = styled.ImageBackground.attrs({
+  source: require("../../../../assets/screen_bg.jpg"),
+})`
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+`;
+
 export const SearchBarContainer = styled(View)`
-  padding: ${(props) => props.theme.space[2]};
-  margin-bottom: ${(props) => props.theme.space[2]};
+  align-self: stretch;
+  align-items: center;
+  padding: ${(props) => props.theme.space[3]};
+  background-color: ${(props) => props.theme.colors.bg["primary"]};
 `;
 
 export const Searchbar = styled(SearchbarComponent)`
@@ -17,8 +29,7 @@ export const VenueCardContainer = styled(Card)`
   width: ${(props) => props.theme.sizes[6]};
   background-color: ${(props) => props.theme.colors.bg["listItem"]};
   border-radius: ${(props) => props.theme.radius.md};
-
-  padding-bottom: ${(props) => props.theme.space[3]};
+  overflow: hidden;
 `;
 
 export const InfoContainer = styled(View)`
