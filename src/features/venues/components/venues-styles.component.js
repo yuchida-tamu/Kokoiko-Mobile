@@ -30,6 +30,7 @@ export const VenueCardContainer = styled(Card)`
   background-color: ${(props) => props.theme.colors.bg["listItem"]};
   border-radius: ${(props) => props.theme.radius.md};
   overflow: hidden;
+  elevation: 10;
 `;
 
 export const InfoContainer = styled(View)`
@@ -45,7 +46,7 @@ export const Row = styled(View)`
 
 export const Title = styled(Text)`
   color: ${(props) => props.theme.colors.text.primary};
-  font-family: ${(props) => props.theme.fonts.body};
+  font-family: ${(props) => props.theme.fonts.heading};
   font-size: ${(props) => props.theme.fontSizes.title};
   margin-top: ${(props) => props.theme.space[2]};
 `;

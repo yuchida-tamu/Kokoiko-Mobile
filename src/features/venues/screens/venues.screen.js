@@ -34,7 +34,7 @@ export const VenuesScreen = () => {
               <VenueInfoCard />
             </Spacer>
           )}
-          keyExtractor={(item) => item.name}
+          keyExtractor={(item) => item.name + "id"}
         />
       </ScreenBackground>
     </SafeArea>
