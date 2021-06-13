@@ -17,7 +17,7 @@ export const SearchBarContainer = styled(View)`
   align-self: stretch;
   align-items: center;
   padding: ${(props) => props.theme.space[3]};
-  background-color: ${(props) => props.theme.colors.bg["primary"]};
+  background-color: ${(props) => props.theme.colors.bg["secondary"]};
 `;
 
 export const Searchbar = styled(SearchbarComponent)`
