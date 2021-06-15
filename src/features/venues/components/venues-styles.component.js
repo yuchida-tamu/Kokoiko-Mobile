@@ -74,3 +74,9 @@ export const AvailabilityIconContainer = styled(View)`
   flex-direction: row;
   align-items: center;
 `;
+
+export const ListContainer = styled(View)`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+`;
