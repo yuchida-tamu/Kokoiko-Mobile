@@ -14,6 +14,7 @@ import { theme } from "./src/infrastructure/theme";
 import { colors } from "./src/infrastructure/theme/colors";
 import { Navigation } from "./src/infrastructure/navigation";
 import { VenuesContextProvider } from "./src/services/venues/venues.context";
+import { LocationContextProvider } from "./src/services/location/location.context";
 
 export default function App() {
   //load google fonts
@@ -28,9 +29,11 @@ export default function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <VenuesContextProvider>
-          <Navigation />
-        </VenuesContextProvider>
+        <LocationContextProvider>
+          <VenuesContextProvider>
+            <Navigation />
+          </VenuesContextProvider>
+        </LocationContextProvider>
       </ThemeProvider>
       <ExpoStatusBar style="light" />
     </>

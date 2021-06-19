@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState, useEffect, useContext } from "react";
 //services
 import {
   prepareRandomizedMockPhoto,
@@ -7,6 +7,7 @@ import {
   transformVenues,
 } from "./venues.service";
 //context
+import { LocationContext } from "../location/location.context";
 
 export const VenuesContext = createContext();
 
@@ -14,6 +15,7 @@ export const VenuesContextProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [venues, setVenues] = useState(null);
   const [error, setError] = useState(null);
+  const { location } = useContext(LocationContext);
 
   const fetchVenuesByLocation = (loc) => {
     //indicate the beginning of loading
@@ -40,10 +42,13 @@ export const VenuesContextProvider = ({ children }) => {
         });
     }, 2000);
   };
-  //run the fetch request on mount
+  //run the fetch request when "location" changes
   useEffect(() => {
-    fetchVenuesByLocation("37.7749295,-122.4194155");
-  }, []);
+    if (location) {
+      const locationStr = `${location.lat},${location.lng}`;
+      fetchVenuesByLocation(locationStr);
+    }
+  }, [location]);
 
   return (
     <VenuesContext.Provider value={{ isLoading, error, venues }}>
