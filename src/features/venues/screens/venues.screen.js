@@ -7,13 +7,12 @@ import { LocationContext } from "../../../services/location/location.context";
 import { VenueInfoCard } from "../components/venue-info-card.component";
 import {
   ScreenBackground,
-  SearchBarContainer,
-  Searchbar,
   VenueList,
   ListContainer,
 } from "../components/venues-styles.component";
 import { SafeArea } from "../../../components/utilities/safe-area.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
+import { SearchBarComponent } from "../../../components/searchbar/searchbar.component";
 //infra
 import { colors } from "../../../infrastructure/theme/colors";
 
@@ -23,30 +22,11 @@ export const VenuesScreen = () => {
     isLoading: isLoadingVenues,
     error,
   } = useContext(VenuesContext);
-  const {
-    keyword,
-    location,
-    isLoading: isLoadingLocation,
-    search,
-  } = useContext(LocationContext);
-
-  const [searchKeyword, setSearchKeyword] = useState(keyword);
-
-  const onChangeSearchKeywordHandler = (input) => setSearchKeyword(input);
 
   return (
     <SafeArea>
       <ScreenBackground>
-        <SearchBarContainer>
-          <Searchbar
-            placeholder="Search"
-            onChangeText={onChangeSearchKeywordHandler}
-            onSubmitEditing={() => {
-              search(searchKeyword);
-            }}
-            value={searchKeyword}
-          />
-        </SearchBarContainer>
+        <SearchBarComponent />
         <ListContainer>
           {isLoadingVenues ? (
             <ActivityIndicator
