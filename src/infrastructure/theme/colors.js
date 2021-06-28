@@ -17,6 +17,7 @@ export const colors = {
   },
   text: {
     primary: "#FFFFFF",
+    muted: "#CECECE",
     success: "#18D8CD",
     error: "#D0421B",
   },

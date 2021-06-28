@@ -1,6 +1,6 @@
 import { View, Text, FlatList } from "react-native";
 import styled from "styled-components/native";
-import { Searchbar as SearchbarComponent, Card } from "react-native-paper";
+import { Card } from "react-native-paper";
 import { Ionicons } from "@expo/vector-icons";
 
 export const ScreenBackground = styled.ImageBackground.attrs({
@@ -11,18 +11,6 @@ export const ScreenBackground = styled.ImageBackground.attrs({
   justify-content: center;
   padding: 0;
   margin: 0;
-`;
-
-export const SearchBarContainer = styled(View)`
-  align-self: stretch;
-  align-items: center;
-  padding: ${(props) => props.theme.space[3]};
-  background-color: ${(props) => props.theme.colors.bg["primary"]};
-`;
-
-export const Searchbar = styled(SearchbarComponent)`
-  width: ${(props) => props.theme.sizes[6]};
-  border-radius: ${(props) => props.theme.radius.md};
 `;
 
 export const VenueCardContainer = styled(Card)`
@@ -72,5 +60,11 @@ export const VenueList = styled(FlatList).attrs({
 export const AvailabilityIconContainer = styled(View)`
   flex-direction: row;
   flex-direction: row;
+  align-items: center;
+`;
+
+export const ListContainer = styled(View)`
+  flex: 1;
+  justify-content: center;
   align-items: center;
 `;

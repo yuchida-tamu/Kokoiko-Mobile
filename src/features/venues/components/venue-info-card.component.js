@@ -16,7 +16,7 @@ import {
 import { Divider } from "../../../components/utilities/divider.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
 
-export const VenueInfoCard = (venue = {}) => {
+export const VenueInfoCard = ({ venue = {} }) => {
   const {
     name = "Sample Gallery",
     address = "1600 sample street",
@@ -25,8 +25,10 @@ export const VenueInfoCard = (venue = {}) => {
       "https://www.wantedinrome.com/i/preview/storage/uploads/2020/12/Galleria_Varsi.jpg",
     ],
     isOpen = true,
+    isClosedTemporarily = false,
     placeId,
   } = venue;
+
   return (
     <VenueCardContainer elevation={15}>
       <BlurView intensity={75} tint="dark">
