@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
+import { TouchableOpacity } from "react-native";
 import { ActivityIndicator } from "react-native-paper";
 //context
 import { VenuesContext } from "../../../services/venues/venues.context";
-import { LocationContext } from "../../../services/location/location.context";
 //component
 import { VenueInfoCard } from "../components/venue-info-card.component";
 import {
@@ -16,7 +16,7 @@ import { SearchBarComponent } from "../../../components/searchbar/searchbar.comp
 //infra
 import { colors } from "../../../infrastructure/theme/colors";
 
-export const VenuesScreen = () => {
+export const VenuesScreen = ({ navigation }) => {
   const {
     venues,
     isLoading: isLoadingVenues,
@@ -39,7 +39,13 @@ export const VenuesScreen = () => {
               data={venues}
               renderItem={(venue) => (
                 <Spacer position="bottom" size="large">
-                  <VenueInfoCard venue={venue.item} />
+                  <TouchableOpacity
+                    onPress={() => {
+                      navigation.navigate("VenueDetail", { item: venue.item });
+                    }}
+                  >
+                    <VenueInfoCard venue={venue.item} />
+                  </TouchableOpacity>
                 </Spacer>
               )}
               keyExtractor={(item) => item.name + "id"}

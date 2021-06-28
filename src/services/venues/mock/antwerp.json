@@ -37,6 +37,16 @@
       "rating": 4,
       "reference": "",
       "user_ratings_total": 832,
+      "phone": "0001112222",
+      "email": "sample@sample.com",
+      "website": "http://sample.com",
+      "events": [
+        { "id": "eventID1", "name": "Sample Event", "date": "2021-06-20" },
+        { "id": "eventID2", "name": "Sample Event", "date": "2021-07-20" },
+        { "id": "eventID3", "name": "Sample Event", "date": "2021-08-20" },
+        { "id": "eventID4", "name": "Sample Event", "date": "2021-09-22" }
+      ],
+      "description": "This is a sample description about the venue. This property contains text information about the place. This is a sample description about the venue. This property contains text information about the place.",
       "vicinity": "Quinten Matsijslei 25, Antwerpen"
     },
     {
@@ -69,7 +79,7 @@
       "place_id": "some place id 2",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "reference": "",
       "scope": "",
@@ -83,6 +93,16 @@
         "point_of_interest",
         "establishment"
       ],
+      "phone": "0001112222",
+      "email": "sample@sample.com",
+      "website": "http://sample.com",
+      "events": [
+        { "id": "eventID1", "name": "Sample Event", "date": "2021-06-20" },
+        { "id": "eventID2", "name": "Sample Event", "date": "2021-07-20" },
+        { "id": "eventID3", "name": "Sample Event", "date": "2021-08-20" },
+        { "id": "eventID4", "name": "Sample Event", "date": "2021-09-22" }
+      ],
+      "description": "This is a sample description about the venue. This property contains text information about the place. This is a sample description about the venue. This property contains text information about the place.",
       "vicinity": "Lange Gasthuisstraat 45, Antwerpen"
     },
     {
@@ -119,7 +139,7 @@
       "place_id": "some place id 3",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "rating": 4.3,
       "reference": "",
@@ -133,6 +153,16 @@
         "establishment"
       ],
       "user_ratings_total": 321,
+      "phone": "0001112222",
+      "email": "sample@sample.com",
+      "website": "http://sample.com",
+      "events": [
+        { "id": "eventID1", "name": "Sample Event", "date": "2021-06-20" },
+        { "id": "eventID2", "name": "Sample Event", "date": "2021-07-20" },
+        { "id": "eventID3", "name": "Sample Event", "date": "2021-08-20" },
+        { "id": "eventID4", "name": "Sample Event", "date": "2021-09-22" }
+      ],
+      "description": "This is a sample description about the venue. This property contains text information about the place. This is a sample description about the venue. This property contains text information about the place.",
       "vicinity": "Handschoenmarkt 3/5, Antwerpen"
     },
     {
@@ -170,6 +200,16 @@
       "rating": 4.6,
       "reference": "",
       "user_ratings_total": 152,
+      "phone": "0001112222",
+      "email": "sample@sample.com",
+      "website": "http://sample.com",
+      "events": [
+        { "id": "eventID1", "name": "Sample Event", "date": "2021-06-20" },
+        { "id": "eventID2", "name": "Sample Event", "date": "2021-07-20" },
+        { "id": "eventID3", "name": "Sample Event", "date": "2021-08-20" },
+        { "id": "eventID4", "name": "Sample Event", "date": "2021-09-22" }
+      ],
+      "description": "This is a sample description about the venue. This property contains text information about the place. This is a sample description about the venue. This property contains text information about the place.",
       "vicinity": "De Burburestraat 4A, Antwerpen"
     },
     {
@@ -208,6 +248,16 @@
       "reference": "",
 
       "user_ratings_total": 151,
+      "phone": "0001112222",
+      "email": "sample@sample.com",
+      "website": "http://sample.com",
+      "events": [
+        { "id": "eventID1", "name": "Sample Event", "date": "2021-06-20" },
+        { "id": "eventID2", "name": "Sample Event", "date": "2021-07-20" },
+        { "id": "eventID3", "name": "Sample Event", "date": "2021-08-20" },
+        { "id": "eventID4", "name": "Sample Event", "date": "2021-09-22" }
+      ],
+      "description": "This is a sample description about the venue. This property contains text information about the place. This is a sample description about the venue. This property contains text information about the place.",
       "vicinity": "Leopold de Waelplaats 34, Antwerpen"
     },
     {
@@ -246,6 +296,16 @@
       "rating": 4.3,
       "reference": "",
       "user_ratings_total": 766,
+      "phone": "0001112222",
+      "email": "sample@sample.com",
+      "website": "http://sample.com",
+      "events": [
+        { "id": "eventID1", "name": "Sample Event", "date": "2021-06-20" },
+        { "id": "eventID2", "name": "Sample Event", "date": "2021-07-20" },
+        { "id": "eventID3", "name": "Sample Event", "date": "2021-08-20" },
+        { "id": "eventID4", "name": "Sample Event", "date": "2021-09-22" }
+      ],
+      "description": "This is a sample description about the venue. This property contains text information about the place. This is a sample description about the venue. This property contains text information about the place.",
       "vicinity": "Wijngaardstraat 8, Antwerpen"
     },
     {
@@ -283,6 +343,16 @@
       "rating": 4.2,
       "reference": "",
       "user_ratings_total": 122,
+      "phone": "0001112222",
+      "email": "sample@sample.com",
+      "website": "http://sample.com",
+      "events": [
+        { "id": "eventID1", "name": "Sample Event", "date": "2021-06-20" },
+        { "id": "eventID2", "name": "Sample Event", "date": "2021-07-20" },
+        { "id": "eventID3", "name": "Sample Event", "date": "2021-08-20" },
+        { "id": "eventID4", "name": "Sample Event", "date": "2021-09-22" }
+      ],
+      "description": "This is a sample description about the venue. This property contains text information about the place. This is a sample description about the venue. This property contains text information about the place.",
       "vicinity": "Sint-Antoniusstraat 8, Antwerpen"
     },
     {
@@ -321,6 +391,16 @@
       "rating": 4.4,
       "reference": "",
       "user_ratings_total": 156,
+      "phone": "0001112222",
+      "email": "sample@sample.com",
+      "website": "http://sample.com",
+      "events": [
+        { "id": "eventID1", "name": "Sample Event", "date": "2021-06-20" },
+        { "id": "eventID2", "name": "Sample Event", "date": "2021-07-20" },
+        { "id": "eventID3", "name": "Sample Event", "date": "2021-08-20" },
+        { "id": "eventID4", "name": "Sample Event", "date": "2021-09-22" }
+      ],
+      "description": "This is a sample description about the venue. This property contains text information about the place. This is a sample description about the venue. This property contains text information about the place.",
       "vicinity": "Pelgrimstraat 28, Antwerpen"
     },
     {
@@ -359,6 +439,16 @@
       "rating": 3.8,
       "reference": "",
       "user_ratings_total": 441,
+      "phone": "0001112222",
+      "email": "sample@sample.com",
+      "website": "http://sample.com",
+      "events": [
+        { "id": "eventID1", "name": "Sample Event", "date": "2021-06-20" },
+        { "id": "eventID2", "name": "Sample Event", "date": "2021-07-20" },
+        { "id": "eventID3", "name": "Sample Event", "date": "2021-08-20" },
+        { "id": "eventID4", "name": "Sample Event", "date": "2021-09-22" }
+      ],
+      "description": "This is a sample description about the venue. This property contains text information about the place. This is a sample description about the venue. This property contains text information about the place.",
       "vicinity": "Lijnwaadmarkt 2, Antwerpen"
     },
     {
@@ -395,7 +485,7 @@
       "place_id": "some place id 10",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 4,
       "rating": 4.7,
@@ -403,6 +493,16 @@
       "scope": "",
       "types": ["restaurant", "food", "point_of_interest", "establishment"],
       "user_ratings_total": 152,
+      "phone": "0001112222",
+      "email": "sample@sample.com",
+      "website": "http://sample.com",
+      "events": [
+        { "id": "eventID1", "name": "Sample Event", "date": "2021-06-20" },
+        { "id": "eventID2", "name": "Sample Event", "date": "2021-07-20" },
+        { "id": "eventID3", "name": "Sample Event", "date": "2021-08-20" },
+        { "id": "eventID4", "name": "Sample Event", "date": "2021-09-22" }
+      ],
+      "description": "This is a sample description about the venue. This property contains text information about the place. This is a sample description about the venue. This property contains text information about the place.",
       "vicinity": "Reyndersstraat 24, Antwerpen"
     },
     {
@@ -439,7 +539,7 @@
       "place_id": "some place id 11",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 2,
       "rating": 4.2,
@@ -453,6 +553,16 @@
         "establishment"
       ],
       "user_ratings_total": 689,
+      "phone": "0001112222",
+      "email": "sample@sample.com",
+      "website": "http://sample.com",
+      "events": [
+        { "id": "eventID1", "name": "Sample Event", "date": "2021-06-20" },
+        { "id": "eventID2", "name": "Sample Event", "date": "2021-07-20" },
+        { "id": "eventID3", "name": "Sample Event", "date": "2021-08-20" },
+        { "id": "eventID4", "name": "Sample Event", "date": "2021-09-22" }
+      ],
+      "description": "This is a sample description about the venue. This property contains text information about the place. This is a sample description about the venue. This property contains text information about the place.",
       "vicinity": "Nieuwstad 8, Antwerpen"
     },
     {
@@ -489,7 +599,7 @@
       "place_id": "some place id 12",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 2,
       "rating": 4.2,
@@ -503,6 +613,16 @@
         "establishment"
       ],
       "user_ratings_total": 854,
+      "phone": "0001112222",
+      "email": "sample@sample.com",
+      "website": "http://sample.com",
+      "events": [
+        { "id": "eventID1", "name": "Sample Event", "date": "2021-06-20" },
+        { "id": "eventID2", "name": "Sample Event", "date": "2021-07-20" },
+        { "id": "eventID3", "name": "Sample Event", "date": "2021-08-20" },
+        { "id": "eventID4", "name": "Sample Event", "date": "2021-09-22" }
+      ],
+      "description": "This is a sample description about the venue. This property contains text information about the place. This is a sample description about the venue. This property contains text information about the place.",
       "vicinity": "Ernest Van Dijckkaai 37, Antwerpen"
     },
     {
@@ -539,7 +659,7 @@
       "place_id": "some place id 13",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 3,
       "rating": 4.5,
@@ -547,6 +667,16 @@
       "scope": "",
       "types": ["restaurant", "food", "point_of_interest", "establishment"],
       "user_ratings_total": 316,
+      "phone": "0001112222",
+      "email": "sample@sample.com",
+      "website": "http://sample.com",
+      "events": [
+        { "id": "eventID1", "name": "Sample Event", "date": "2021-06-20" },
+        { "id": "eventID2", "name": "Sample Event", "date": "2021-07-20" },
+        { "id": "eventID3", "name": "Sample Event", "date": "2021-08-20" },
+        { "id": "eventID4", "name": "Sample Event", "date": "2021-09-22" }
+      ],
+      "description": "This is a sample description about the venue. This property contains text information about the place. This is a sample description about the venue. This property contains text information about the place.",
       "vicinity": "Oudeleeuwenrui 12, Antwerpen"
     },
     {
@@ -583,7 +713,7 @@
       "place_id": "some place id 14",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 3,
       "rating": 4.1,
@@ -591,6 +721,16 @@
       "scope": "",
       "types": ["restaurant", "food", "point_of_interest", "establishment"],
       "user_ratings_total": 1274,
+      "phone": "0001112222",
+      "email": "sample@sample.com",
+      "website": "http://sample.com",
+      "events": [
+        { "id": "eventID1", "name": "Sample Event", "date": "2021-06-20" },
+        { "id": "eventID2", "name": "Sample Event", "date": "2021-07-20" },
+        { "id": "eventID3", "name": "Sample Event", "date": "2021-08-20" },
+        { "id": "eventID4", "name": "Sample Event", "date": "2021-09-22" }
+      ],
+      "description": "This is a sample description about the venue. This property contains text information about the place. This is a sample description about the venue. This property contains text information about the place.",
       "vicinity": "Hopland 2, Antwerpen"
     },
     {
@@ -627,7 +767,7 @@
       "place_id": "some place id 15",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 4,
       "rating": 4.4,
@@ -635,6 +775,16 @@
       "scope": "",
       "types": ["restaurant", "food", "point_of_interest", "establishment"],
       "user_ratings_total": 311,
+      "phone": "0001112222",
+      "email": "sample@sample.com",
+      "website": "http://sample.com",
+      "events": [
+        { "id": "eventID1", "name": "Sample Event", "date": "2021-06-20" },
+        { "id": "eventID2", "name": "Sample Event", "date": "2021-07-20" },
+        { "id": "eventID3", "name": "Sample Event", "date": "2021-08-20" },
+        { "id": "eventID4", "name": "Sample Event", "date": "2021-09-22" }
+      ],
+      "description": "This is a sample description about the venue. This property contains text information about the place. This is a sample description about the venue. This property contains text information about the place.",
       "vicinity": "Oude Koornmarkt 16, Antwerpen"
     },
     {
@@ -671,7 +821,7 @@
       "place_id": "some place id 16",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "rating": 4.9,
       "reference": "",
@@ -686,6 +836,16 @@
         "establishment"
       ],
       "user_ratings_total": 60,
+      "phone": "0001112222",
+      "email": "sample@sample.com",
+      "website": "http://sample.com",
+      "events": [
+        { "id": "eventID1", "name": "Sample Event", "date": "2021-06-20" },
+        { "id": "eventID2", "name": "Sample Event", "date": "2021-07-20" },
+        { "id": "eventID3", "name": "Sample Event", "date": "2021-08-20" },
+        { "id": "eventID4", "name": "Sample Event", "date": "2021-09-22" }
+      ],
+      "description": "This is a sample description about the venue. This property contains text information about the place. This is a sample description about the venue. This property contains text information about the place.",
       "vicinity": "Scheldestraat 15, Antwerpen"
     },
     {
@@ -722,7 +882,7 @@
       "place_id": "some place id 17",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 2,
       "rating": 4.1,
@@ -736,6 +896,16 @@
         "establishment"
       ],
       "user_ratings_total": 335,
+      "phone": "0001112222",
+      "email": "sample@sample.com",
+      "website": "http://sample.com",
+      "events": [
+        { "id": "eventID1", "name": "Sample Event", "date": "2021-06-20" },
+        { "id": "eventID2", "name": "Sample Event", "date": "2021-07-20" },
+        { "id": "eventID3", "name": "Sample Event", "date": "2021-08-20" },
+        { "id": "eventID4", "name": "Sample Event", "date": "2021-09-22" }
+      ],
+      "description": "This is a sample description about the venue. This property contains text information about the place. This is a sample description about the venue. This property contains text information about the place.",
       "vicinity": "Kasteelpleinstraat 45/47, Antwerpen"
     },
     {
@@ -772,7 +942,7 @@
       "place_id": "some place id 18",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 4,
       "rating": 4.7,
@@ -780,6 +950,16 @@
       "scope": "",
       "types": ["restaurant", "food", "point_of_interest", "establishment"],
       "user_ratings_total": 362,
+      "phone": "0001112222",
+      "email": "sample@sample.com",
+      "website": "http://sample.com",
+      "events": [
+        { "id": "eventID1", "name": "Sample Event", "date": "2021-06-20" },
+        { "id": "eventID2", "name": "Sample Event", "date": "2021-07-20" },
+        { "id": "eventID3", "name": "Sample Event", "date": "2021-08-20" },
+        { "id": "eventID4", "name": "Sample Event", "date": "2021-09-22" }
+      ],
+      "description": "This is a sample description about the venue. This property contains text information about the place. This is a sample description about the venue. This property contains text information about the place.",
       "vicinity": "Leopoldstraat 24, Antwerpen"
     },
     {
@@ -816,7 +996,7 @@
       "place_id": "some place id 19",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 2,
       "rating": 3.9,
@@ -824,6 +1004,16 @@
       "scope": "",
       "types": ["restaurant", "food", "point_of_interest", "establishment"],
       "user_ratings_total": 4311,
+      "phone": "0001112222",
+      "email": "sample@sample.com",
+      "website": "http://sample.com",
+      "events": [
+        { "id": "eventID1", "name": "Sample Event", "date": "2021-06-20" },
+        { "id": "eventID2", "name": "Sample Event", "date": "2021-07-20" },
+        { "id": "eventID3", "name": "Sample Event", "date": "2021-08-20" },
+        { "id": "eventID4", "name": "Sample Event", "date": "2021-09-22" }
+      ],
+      "description": "This is a sample description about the venue. This property contains text information about the place. This is a sample description about the venue. This property contains text information about the place.",
       "vicinity": "Jan Blomstraat 8, Antwerpen"
     },
     {
@@ -860,7 +1050,7 @@
       "place_id": "some place id 20",
       "plus_code": {
         "compound_code": "",
-        "global_code": "",
+        "global_code": ""
       },
       "price_level": 3,
       "rating": 4.6,
@@ -868,6 +1058,16 @@
       "scope": "",
       "types": ["restaurant", "food", "point_of_interest", "establishment"],
       "user_ratings_total": 151,
+      "phone": "0001112222",
+      "email": "sample@sample.com",
+      "website": "http://sample.com",
+      "events": [
+        { "id": "eventID1", "name": "Sample Event", "date": "2021-06-20" },
+        { "id": "eventID2", "name": "Sample Event", "date": "2021-07-20" },
+        { "id": "eventID3", "name": "Sample Event", "date": "2021-08-20" },
+        { "id": "eventID4", "name": "Sample Event", "date": "2021-09-22" }
+      ],
+      "description": "This is a sample description about the venue. This property contains text information about the place. This is a sample description about the venue. This property contains text information about the place.",
       "vicinity": "Reyndersstraat 17, Antwerpen"
     }
   ],
