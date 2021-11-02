@@ -1,13 +1,13 @@
-import React, { createContext, useState, useEffect, useContext } from "react";
+import React, { createContext, useState, useEffect, useContext } from 'react';
 //services
 import {
   prepareRandomizedMockPhoto,
   formatVenuesResults,
   requestVenuesByLocation,
   transformVenues,
-} from "./venues.service";
+} from './venues.service';
 //context
-import { LocationContext } from "../location/location.context";
+import { LocationContext } from '../location/location.context';
 
 export const VenuesContext = createContext();
 
@@ -30,6 +30,7 @@ export const VenuesContextProvider = ({ children }) => {
         .then(formatVenuesResults)
         .then((results) => {
           //update the venues state with the results
+
           setVenues(results);
           //indicate the end of loading
           setIsLoading(false);

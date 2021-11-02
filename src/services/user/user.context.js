@@ -6,6 +6,7 @@ export const UserContext = createContext();
 
 export const UserContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [isLoadingUser, setIsLoadingUser] = useState(false);
 
   const setUsername = (username) => {
     if (username !== user.username) setUser({ ...user, username });
@@ -17,30 +18,55 @@ export const UserContextProvider = ({ children }) => {
 
   const addFavourite = (favourite) => {
     // granted "favourite" is already validated before this method is invoked
-    const favs = [...user.favourites, favourite];
+    const favs = new Set([...user.favourites]);
+    console.log('before', favs);
 
+    favs.add(favourite);
+    console.log(favs);
     setUser({ ...user, favourites: favs });
   };
 
   const removeFavourite = (favourite) => {
-    const favs = [...user.favourites];
-    const updated = favs.filter((fav) => fav.id === favourite.id);
+    const favs = new Set([...user.favourites]);
+    favs.delete(favourite);
 
-    setUser({ ...user, favourites: updated });
+    setUser({ ...user, favourites: favs });
   };
 
-  const fetchUser = async () => {
-    return (user = await requestUser());
+  const isFavourite = (id, list) => {
+    return list.has(id);
+  };
+
+  const fetchUser = () => {
+    setIsLoadingUser(true);
+
+    setTimeout(() => {
+      requestUser()
+        .then((user) => {
+          setUser({
+            ...user,
+            favourites:
+              user.favourites > 0 ? new Set([...user.favourites]) : new Set(),
+          });
+        })
+        .catch((err) => console.error(err));
+    }, 2000);
   };
 
   useEffect(() => {
-    const user = fetchUser();
-    setUser(user);
+    fetchUser();
   }, []);
 
   return (
     <UserContext.Provider
-      value={(user, setUsername, setEmail, addFavourite, removeFavourite)}
+      value={{
+        user,
+        setUsername,
+        setEmail,
+        addFavourite,
+        removeFavourite,
+        isFavourite,
+      }}
     >
       {children}
     </UserContext.Provider>
