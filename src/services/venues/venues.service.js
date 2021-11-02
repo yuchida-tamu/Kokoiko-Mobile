@@ -1,5 +1,5 @@
-import { mocks, mockImages } from "./mock"; //mock data for development purposes
-import camelize from "camelize";
+import { mocks, mockImages } from './mock'; //mock data for development purposes
+import camelize from 'camelize';
 
 //prepareRandomizedMockPhoto will insert uri of a random mock image into each object element
 export const prepareRandomizedMockPhoto = (results = []) => {
@@ -24,7 +24,8 @@ export const transformVenues = (results = []) => {
       ...venue,
       isOpenNow: venue.opening_hours && venue.opening_hours.open_now,
       address: venue.vicinity,
-      isClosedTemporarily: venue.business_status === "CLOSED_TEMPORARILY",
+      isClosedTemporarily: venue.business_status === 'CLOSED_TEMPORARILY',
+      id: venue.place_id, //this is temporary
     };
   });
 };
@@ -36,7 +37,7 @@ export const requestVenuesByLocation = (location) => {
     //NOTE: Eventually this app should search places based on keywords as well
     const data = mocks[location]; //DELETE for Production
 
-    if (!data) reject("venues not found");
+    if (!data) reject('venues not found');
     resolve(data.results);
   });
 };
