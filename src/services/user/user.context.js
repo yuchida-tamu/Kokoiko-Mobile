@@ -40,7 +40,7 @@ export const UserContextProvider = ({ children }) => {
 
   return (
     <UserContext.Provider
-      value={(setUsername, setEmail, addFavourite, removeFavourite)}
+      value={(user, setUsername, setEmail, addFavourite, removeFavourite)}
     >
       {children}
     </UserContext.Provider>
