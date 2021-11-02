@@ -1,4 +1,6 @@
+import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
+//screens
 import { UserScreen } from '../../features/user/screens/user.screen';
 import { UserFavouritesScreen } from '../../features/user/screens/user-favourites.screen';
 
