@@ -16,6 +16,18 @@ import { SearchBarComponent } from '../../../components/searchbar/searchbar.comp
 //infra
 import { colors } from '../../../infrastructure/theme/colors';
 
+const VenueListItem = ({ item }) => (
+  <Spacer position="bottom" size="large">
+    <TouchableOpacity
+      onPress={() => {
+        navigation.navigate('VenueDetail', { item: item.item });
+      }}
+    >
+      <VenueInfoCard venue={item.item} />
+    </TouchableOpacity>
+  </Spacer>
+);
+
 export const VenuesScreen = ({ navigation }) => {
   const {
     venues,
@@ -23,17 +35,10 @@ export const VenuesScreen = ({ navigation }) => {
     error,
   } = useContext(VenuesContext);
 
-  const renderItem = useCallback(({ item }) => {
-    <Spacer position="bottom" size="large">
-      <TouchableOpacity
-        onPress={() => {
-          navigation.navigate('VenueDetail', { item: item.item });
-        }}
-      >
-        <VenueInfoCard venue={item.item} />
-      </TouchableOpacity>
-    </Spacer>;
-  }, []);
+  const renderItem = useCallback(
+    ({ item }) => <VenueListItem item={item} key={item.id} />,
+    []
+  );
 
   const keyExtractor = useCallback((item) => item.name + 'id', []);
 
