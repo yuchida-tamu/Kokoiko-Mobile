@@ -1,5 +1,6 @@
 import { createContext } from 'react';
-import { useState } from 'react/cjs/react.development';
+import { useEffect, useState } from 'react/cjs/react.development';
+import { requestUser } from './user.service';
 
 export const UserContext = createContext();
 
@@ -27,6 +28,15 @@ export const UserContextProvider = ({ children }) => {
 
     setUser({ ...user, favourites: updated });
   };
+
+  const fetchUser = async () => {
+    return (user = await requestUser());
+  };
+
+  useEffect(() => {
+    const user = fetchUser();
+    setUser(user);
+  }, []);
 
   return (
     <UserContext.Provider
