@@ -1,20 +1,21 @@
-import { StatusBar as ExpoStatusBar } from "expo-status-bar";
-import React from "react";
-import { ThemeProvider } from "styled-components/native";
+import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
+import React from 'react';
+import { ThemeProvider } from 'styled-components/native';
 import {
   useFonts as useArchivo,
   Archivo_400Regular,
-} from "@expo-google-fonts/archivo";
+} from '@expo-google-fonts/archivo';
 import {
   useFonts as useMontserrat,
   Montserrat_400Regular,
-} from "@expo-google-fonts/montserrat";
+} from '@expo-google-fonts/montserrat';
 //infrastructure
-import { theme } from "./src/infrastructure/theme";
-import { colors } from "./src/infrastructure/theme/colors";
-import { Navigation } from "./src/infrastructure/navigation";
-import { VenuesContextProvider } from "./src/services/venues/venues.context";
-import { LocationContextProvider } from "./src/services/location/location.context";
+import { theme } from './src/infrastructure/theme';
+import { colors } from './src/infrastructure/theme/colors';
+import { Navigation } from './src/infrastructure/navigation';
+import { VenuesContextProvider } from './src/services/venues/venues.context';
+import { LocationContextProvider } from './src/services/location/location.context';
+import { UserContextProvider } from './src/services/user/user.context';
 
 export default function App() {
   //load google fonts
@@ -31,7 +32,9 @@ export default function App() {
       <ThemeProvider theme={theme}>
         <LocationContextProvider>
           <VenuesContextProvider>
-            <Navigation />
+            <UserContextProvider>
+              <Navigation />
+            </UserContextProvider>
           </VenuesContextProvider>
         </LocationContextProvider>
       </ThemeProvider>
