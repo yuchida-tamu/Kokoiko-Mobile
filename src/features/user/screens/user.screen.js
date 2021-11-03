@@ -42,7 +42,7 @@ export const UserScreen = ({ navigation }) => {
   const { user } = useContext(UserContext);
 
   const navigateToFavouritesHandler = useCallback(() => {
-    navigation.navigate('UserFavourites');
+    navigation.navigate('UserFavourites', { navigate: navigation.navigate });
   }, []);
 
   return (

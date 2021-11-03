@@ -25,7 +25,7 @@ export const transformVenues = (results = []) => {
       isOpenNow: venue.opening_hours && venue.opening_hours.open_now,
       address: venue.vicinity,
       isClosedTemporarily: venue.business_status === 'CLOSED_TEMPORARILY',
-      id: venue.place_id, //this is temporary
+      id: venue.place_id.concat(Math.random().toString()), //this is temporary
     };
   });
 };

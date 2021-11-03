@@ -7,7 +7,7 @@ export const formatUserResult = (user = []) => {
 
 export const requestUser = () => {
   return new Promise((resolve, reject) => {
-    const user = mockUser;
+    const user = mockUser.user;
     // const user = await axios.get ~
     if (!user) reject('user not found');
     resolve(user);

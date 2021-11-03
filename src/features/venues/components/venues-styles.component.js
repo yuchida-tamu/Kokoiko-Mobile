@@ -1,10 +1,10 @@
-import { View, Text, FlatList } from "react-native";
-import styled from "styled-components/native";
-import { Card } from "react-native-paper";
-import { Ionicons } from "@expo/vector-icons";
+import { View, Text, FlatList } from 'react-native';
+import styled from 'styled-components/native';
+import { Card } from 'react-native-paper';
+import { Ionicons } from '@expo/vector-icons';
 
 export const ScreenBackground = styled.ImageBackground.attrs({
-  source: require("../../../../assets/screen_bg.jpg"),
+  source: require('../../../../assets/screen_bg.jpg'),
 })`
   flex: 1;
   align-items: center;
@@ -15,7 +15,7 @@ export const ScreenBackground = styled.ImageBackground.attrs({
 
 export const VenueCardContainer = styled(Card)`
   width: ${(props) => props.theme.sizes[6]};
-  background-color: ${(props) => props.theme.colors.bg["listItem"]};
+  background-color: ${(props) => props.theme.colors.bg['listItem']};
   border-radius: ${(props) => props.theme.radius.md};
   overflow: hidden;
   elevation: 10;
@@ -46,9 +46,17 @@ export const BodyText = styled(Text)`
 `;
 
 export const IconHeart = styled(Ionicons).attrs({
-  name: "heart-outline",
+  name: 'heart-outline',
   size: 28,
-  color: "#C4CF44",
+  color: '#C4CF44',
+})`
+  margin-top: ${(props) => props.theme.space[2]};
+`;
+
+export const IconHeartFill = styled(Ionicons).attrs({
+  name: 'heart',
+  size: 28,
+  color: '#C4CF44',
 })`
   margin-top: ${(props) => props.theme.space[2]};
 `;

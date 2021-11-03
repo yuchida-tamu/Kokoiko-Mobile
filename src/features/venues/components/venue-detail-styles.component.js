@@ -1,5 +1,8 @@
 import { View, Text } from 'react-native';
 import styled from 'styled-components/native';
+import { List } from 'react-native-paper';
+import { colors } from '../../../infrastructure/theme/colors';
+import { fonts, fontSizes } from '../../../infrastructure/theme/fonts';
 
 export const AccordionList = styled(List.Accordion).attrs({
   titleStyle: {

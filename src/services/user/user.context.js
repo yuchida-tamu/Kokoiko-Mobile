@@ -1,11 +1,13 @@
 import React, { createContext } from 'react';
 import { useEffect, useState } from 'react/cjs/react.development';
+import { UniqueVenueSet } from '../../utils/unique-set';
 import { requestUser } from './user.service';
 
 export const UserContext = createContext();
 
 export const UserContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [isLoadingUser, setIsLoadingUser] = useState(false);
 
   const setUsername = (username) => {
     if (username !== user.username) setUser({ ...user, username });
@@ -17,30 +19,54 @@ export const UserContextProvider = ({ children }) => {
 
   const addFavourite = (favourite) => {
     // granted "favourite" is already validated before this method is invoked
-    const favs = [...user.favourites, favourite];
+    const favs = new UniqueVenueSet([...user.favourites.getValue(), favourite]);
 
     setUser({ ...user, favourites: favs });
   };
 
   const removeFavourite = (favourite) => {
-    const favs = [...user.favourites];
-    const updated = favs.filter((fav) => fav.id === favourite.id);
+    const favs = new UniqueVenueSet([...user.favourites.getValue()]);
+    favs.delete(favourite);
 
-    setUser({ ...user, favourites: updated });
+    setUser({ ...user, favourites: favs });
   };
 
-  const fetchUser = async () => {
-    return (user = await requestUser());
+  const isFavourite = (item, list) => {
+    return list.hasElem(item);
+  };
+
+  const fetchUser = () => {
+    setIsLoadingUser(true);
+
+    setTimeout(() => {
+      requestUser()
+        .then((user) => {
+          setUser({
+            ...user,
+            favourites:
+              user.favourites > 0
+                ? new UniqueVenueSet([...user.favourites])
+                : new UniqueVenueSet(),
+          });
+        })
+        .catch((err) => console.error(err));
+    }, 2000);
   };
 
   useEffect(() => {
-    const user = fetchUser();
-    setUser(user);
+    fetchUser();
   }, []);
 
   return (
     <UserContext.Provider
-      value={(user, setUsername, setEmail, addFavourite, removeFavourite)}
+      value={{
+        user,
+        setUsername,
+        setEmail,
+        addFavourite,
+        removeFavourite,
+        isFavourite,
+      }}
     >
       {children}
     </UserContext.Provider>
