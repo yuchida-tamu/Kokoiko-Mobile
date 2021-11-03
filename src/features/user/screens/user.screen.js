@@ -1,6 +1,5 @@
-import React, { useContext } from 'react';
+import React, { useContext, useCallback } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import { useCallback } from 'react/cjs/react.development';
 import { SafeArea } from '../../../components/utilities/safe-area.component';
 import { UserContext } from '../../../services/user/user.context';
 import styled from 'styled-components';

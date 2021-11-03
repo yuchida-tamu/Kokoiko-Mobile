@@ -7,6 +7,7 @@ import { VenuesNavigator } from './venues.navigator';
 import { UserNavigator } from './user.navigation';
 //screen
 import { MapScreen } from '../../features/map/screens/map.screen';
+import { CalendarScreen } from '../../features/calendar/screens/calendar.screen';
 import { colors } from '../theme/colors';
 
 const Tab = createBottomTabNavigator();
@@ -14,7 +15,7 @@ const Tab = createBottomTabNavigator();
 const TAB_ICON = {
   Venues: 'md-home-outline',
   Map: 'md-map',
-  Favourites: 'md-heart',
+  Calendar: 'md-calendar-outline',
   User: 'person-outline',
 };
 
@@ -44,7 +45,7 @@ export const AppNavigator = () => {
     >
       <Tab.Screen name="Venues" component={VenuesNavigator} />
       <Tab.Screen name="Map" component={MapScreen} />
-      <Tab.Screen name="Favourites" component={FavouritesScreen} />
+      <Tab.Screen name="Calendar" component={CalendarScreen} />
       <Tab.Screen name="User" component={UserNavigator} />
     </Tab.Navigator>
   );
