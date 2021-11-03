@@ -1,20 +1,19 @@
 export class UniqueVenueSet {
   constructor(items) {
     if (!items || !Array.isArray(items)) {
-      this.uniqueSet = new Set();
+      this.uniqueSet = [];
     } else {
       let _uniqueSet = [];
       for (let i = 0; i < items.length; i++) {
         if (
           _uniqueSet.length === 0 ||
-          _uniqueSet.filter((el) => el.toString() === items[i].toString())
-            .length === 0
+          _uniqueSet.filter((el) => el.id === items[i].id).length === 0
         ) {
           _uniqueSet.push(items[i]);
         }
       }
 
-      this.uniqueSet = new Set([..._uniqueSet]);
+      this.uniqueSet = [..._uniqueSet];
     }
   }
 
@@ -35,11 +34,17 @@ export class UniqueVenueSet {
   }
 
   add(item) {
-    if (!this.hasElem(item)) this.uniqueSet.add(item);
+    if (!this.hasElem(item)) {
+      this.uniqueSet = [...this.uniqueSet, item];
+      console.log(this.uniqueSet.length);
+    }
   }
 
   delete(item) {
-    this.uniqueSet.delete(item);
+    const _uniqueSet = [...this.uniqueSet].filter((el) => el.id !== item.id);
+
+    this.uniqueSet = [..._uniqueSet];
+    console.log(this.uniqueSet.length);
   }
 
   toString() {

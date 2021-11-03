@@ -19,11 +19,8 @@ export const UserContextProvider = ({ children }) => {
 
   const addFavourite = (favourite) => {
     // granted "favourite" is already validated before this method is invoked
-    const favs = new UniqueVenueSet([...user.favourites.getValue()]);
-    console.log('before', favs);
+    const favs = new UniqueVenueSet([...user.favourites.getValue(), favourite]);
 
-    favs.add(favourite);
-    console.log(favs);
     setUser({ ...user, favourites: favs });
   };
 
