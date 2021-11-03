@@ -38,15 +38,15 @@ export const VenueInfoCard = ({ venue = {} }) => {
     useContext(UserContext);
 
   const addToFavouritesHandler = () => {
-    addFavourite(venue.id);
+    addFavourite(venue);
   };
 
   const removeFromFavouritesHandler = () => {
-    removeFavourite(venue.id);
+    removeFavourite(venue);
   };
 
   useEffect(() => {
-    const isFav = isFavourite(venue.id, user.favourites);
+    const isFav = isFavourite(venue, user.favourites);
 
     setIsFill(isFav);
   }, [venue.id, user.favourites, setIsFill]);

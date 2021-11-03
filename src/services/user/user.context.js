@@ -1,5 +1,6 @@
 import React, { createContext } from 'react';
 import { useEffect, useState } from 'react/cjs/react.development';
+import { UniqueVenueSet } from '../../utils/unique-set';
 import { requestUser } from './user.service';
 
 export const UserContext = createContext();
@@ -18,7 +19,7 @@ export const UserContextProvider = ({ children }) => {
 
   const addFavourite = (favourite) => {
     // granted "favourite" is already validated before this method is invoked
-    const favs = new Set([...user.favourites]);
+    const favs = new UniqueVenueSet([...user.favourites.getValue()]);
     console.log('before', favs);
 
     favs.add(favourite);
@@ -27,14 +28,14 @@ export const UserContextProvider = ({ children }) => {
   };
 
   const removeFavourite = (favourite) => {
-    const favs = new Set([...user.favourites]);
+    const favs = new UniqueVenueSet([...user.favourites.getValue()]);
     favs.delete(favourite);
 
     setUser({ ...user, favourites: favs });
   };
 
-  const isFavourite = (id, list) => {
-    return list.has(id);
+  const isFavourite = (item, list) => {
+    return list.hasElem(item);
   };
 
   const fetchUser = () => {
@@ -46,7 +47,9 @@ export const UserContextProvider = ({ children }) => {
           setUser({
             ...user,
             favourites:
-              user.favourites > 0 ? new Set([...user.favourites]) : new Set(),
+              user.favourites > 0
+                ? new UniqueVenueSet([...user.favourites])
+                : new UniqueVenueSet(),
           });
         })
         .catch((err) => console.error(err));

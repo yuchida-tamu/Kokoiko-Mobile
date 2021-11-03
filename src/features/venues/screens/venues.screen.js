@@ -17,7 +17,7 @@ import { SearchBarComponent } from '../../../components/searchbar/searchbar.comp
 import { colors } from '../../../infrastructure/theme/colors';
 import { UserContext } from '../../../services/user/user.context';
 
-const VenueListComponent = ({ navigation }) => {
+export const VenueListComponent = ({ navigation }) => {
   const { venues } = useContext(VenuesContext);
   const renderItem = useCallback(({ item }) => {
     return <VenueListItem item={item} key={item.placeId} />;
