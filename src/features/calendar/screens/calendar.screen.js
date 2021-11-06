@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
-import { Calendar, CalendarList } from 'react-native-calendars';
+import { Calendar, CalendarList, Agenda } from 'react-native-calendars';
 import styled from 'styled-components';
 import { colors } from '../../../infrastructure/theme/colors';
 import { Ionicons } from '@expo/vector-icons';
@@ -29,7 +29,7 @@ const CalendarNavigationDivider = styled(View)`
   background-color: ${(props) => props.theme.colors.text.primary};
 `;
 
-const CalendarNavigation = ({ scrollToCurrent }) => {
+export const CalendarNavigation = ({ scrollToCurrent }) => {
   return (
     <CalendarNavigationContainer>
       <CalendarNavigationDivider />
@@ -43,13 +43,34 @@ const CalendarNavigation = ({ scrollToCurrent }) => {
   );
 };
 
-export const CalendarScreen = () => {
+export const CalendarScreen = ({ navigation }) => {
   const [current, setCurrent] = useState(new Date());
   const calendarRef = useRef(null);
 
   const scrollToCurrent = () => {
     calendarRef.current.scrollToMonth(current.toLocaleDateString);
   };
+
+  //on day press,
+  //open Agenda (navigate to the Agenda Screen with the selected day )
+  // day Object {
+  //   "dateString": "2021-11-09",
+  //   "day": 9,
+  //   "month": 11,
+  //   "timestamp": 1636416000000,
+  //   "year": 2021,
+  // }
+
+  const goBack = () => {
+    navigation.navigate('Calendar');
+  };
+
+  const onDayPressHandler = useCallback((day) => {
+    navigation.navigate('Agenda', {
+      selectedDate: day,
+      goBack: goBack,
+    });
+  }, []);
 
   return (
     <CalendarSafeArea>
@@ -69,6 +90,7 @@ export const CalendarScreen = () => {
           monthTextColor: colors.text.primary,
           selectedDayBackgroundColor: colors.ui.success,
         }}
+        onDayPress={onDayPressHandler}
       />
     </CalendarSafeArea>
   );

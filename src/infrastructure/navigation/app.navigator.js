@@ -9,6 +9,7 @@ import { UserNavigator } from './user.navigation';
 import { MapScreen } from '../../features/map/screens/map.screen';
 import { CalendarScreen } from '../../features/calendar/screens/calendar.screen';
 import { colors } from '../theme/colors';
+import { CalendarNavigator } from './calendar.navigator';
 
 const Tab = createBottomTabNavigator();
 
@@ -45,7 +46,7 @@ export const AppNavigator = () => {
     >
       <Tab.Screen name="Venues" component={VenuesNavigator} />
       <Tab.Screen name="Map" component={MapScreen} />
-      <Tab.Screen name="Calendar" component={CalendarScreen} />
+      <Tab.Screen name="Calendar" component={CalendarNavigator} />
       <Tab.Screen name="User" component={UserNavigator} />
     </Tab.Navigator>
   );
