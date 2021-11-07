@@ -2,6 +2,58 @@
   "user": {
     "username": "Yuta Uchida",
     "email": "yuta@test.com",
-    "favourites": []
+    "favourites": [],
+    "calendar": {
+      "2021-12-24": [
+        {
+          "id": "jakjf;aljp@aja;;:a",
+          "name": "Christmas Eve",
+          "venue": {
+            "name": "Event Venue",
+            "location": {
+              "lat": 35.689487,
+              "lng": 139.691711
+            }
+          }
+        }
+      ],
+      "2021-01-01": [
+        {
+          "id": "jakjf;aljp@ajaadww",
+          "name": "Visit Family",
+          "venue": {
+            "name": "Parent house",
+            "location": {
+              "lat": 34.385204,
+              "lng": 132.455292
+            }
+          }
+        }
+      ],
+      "2021-05-01": [
+        {
+          "id": "jakjf;aljp@aja;;:a",
+          "name": "Go to bank",
+          "venue": {
+            "name": "Bank",
+            "location": {
+              "lat": 35.689487,
+              "lng": 139.691711
+            }
+          }
+        },
+        {
+          "id": "jakjf;aljp@aja;dadaa",
+          "name": "Dinner with Tani",
+          "venue": {
+            "name": "Fancy restaurant",
+            "location": {
+              "lat": 35.663712,
+              "lng": 139.701361
+            }
+          }
+        }
+      ]
+    }
   }
 }

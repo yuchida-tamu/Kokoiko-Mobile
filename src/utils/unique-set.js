@@ -1,4 +1,4 @@
-export class UniqueVenueSet {
+export class UniqueSet {
   constructor(items) {
     if (!items || !Array.isArray(items)) {
       this.uniqueSet = [];
@@ -49,5 +49,11 @@ export class UniqueVenueSet {
 
   toString() {
     return this.uniqueSet.toString();
+  }
+}
+
+export class UniqueVenueSet extends UniqueSet {
+  constructor(items) {
+    super(items);
   }
 }
