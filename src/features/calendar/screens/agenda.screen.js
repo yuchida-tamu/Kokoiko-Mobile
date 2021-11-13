@@ -1,23 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { View, Text } from 'react-native';
 import { Agenda } from 'react-native-calendars';
-import { SafeArea } from '../../../components/utilities/safe-area.component';
+import { UserContext } from '../../../services/user/user.context';
 import { CalendarNavigation } from './calendar.screen';
 export const AgendaScreen = ({ route }) => {
-  console.log(route);
+  const {
+    user: { calendar },
+  } = useContext(UserContext);
+
   return (
     <>
       <CalendarNavigation scrollToCurrent={route.params.goBack} />
       <Agenda
-        items={{
-          '2012-05-22': [{ name: 'item 1 - any js object' }],
-          '2012-05-23': [{ name: 'item 2 - any js object', height: 80 }],
-          '2012-05-24': [],
-          '2021-11-05': [
-            { name: 'item 3 - any js object' },
-            { name: 'any js object' },
-          ],
-        }}
+        items={calendar}
         // Callback that gets called when items for a certain month should be loaded (month became visible)
         loadItemsForMonth={(month) => {
           console.log('trigger items loading');

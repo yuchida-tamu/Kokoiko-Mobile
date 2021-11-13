@@ -29,7 +29,7 @@ const CalendarNavigationDivider = styled(View)`
   background-color: ${(props) => props.theme.colors.text.primary};
 `;
 
-export const CalendarNavigation = ({ scrollToCurrent }) => {
+export const CalendarNavigation = ({ scrollToCurrent, openForm }) => {
   return (
     <CalendarNavigationContainer>
       <CalendarNavigationDivider />
@@ -39,6 +39,11 @@ export const CalendarNavigation = ({ scrollToCurrent }) => {
         </View>
       </CalendarNavigationTab>
       <CalendarNavigationDivider />
+      <CalendarNavigationTab onPress={openForm}>
+        <View>
+          <Ionicons name="add" size={24} color={colors.text.muted} />
+        </View>
+      </CalendarNavigationTab>
     </CalendarNavigationContainer>
   );
 };
@@ -49,6 +54,10 @@ export const CalendarScreen = ({ navigation }) => {
 
   const scrollToCurrent = () => {
     calendarRef.current.scrollToMonth(current.toLocaleDateString);
+  };
+
+  const openForm = () => {
+    navigation.navigate('AgendaForm');
   };
 
   //on day press,
@@ -74,7 +83,10 @@ export const CalendarScreen = ({ navigation }) => {
 
   return (
     <CalendarSafeArea>
-      <CalendarNavigation scrollToCurrent={scrollToCurrent} />
+      <CalendarNavigation
+        scrollToCurrent={scrollToCurrent}
+        openForm={openForm}
+      />
       <CalendarList
         ref={calendarRef}
         style={{ height: '100%' }}
